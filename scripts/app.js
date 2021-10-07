@@ -147,13 +147,15 @@ Vue.component('form-component',{
 				this.errores.push('Numero invalido')
 			}
 
-			if(!this.lista_de_productos[0]){
-				this.errores.push('Debe seleccionar la cantidad de dias que entrena.');
+			if (this.elegido == null) {
+				this.errores.push('Seleccioná la cantidad de días que entrenas');
 			}
 
-			if (this.elegido == null) {
-				this.errores.push('Debe elegir una opcion entre los productos.');
+			if(!this.lista_de_productos[0]){
+				this.errores.push('Elegí por lo menos alguna opción de producto');
 			}
+
+
 
 
 			if(this.errores.length === 0){
