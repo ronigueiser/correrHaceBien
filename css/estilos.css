@@ -1,0 +1,222 @@
+/* NAV BAR */
+
+@media (max-width: 575px) {
+    .nav-item {
+        font-size: 1.25em;
+    }
+}
+
+/* NAV BAR */
+
+/* SALUD */
+
+#salud ul li {
+    padding-top: 220px;
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.circulacion {
+    background: url(../img/tres_circulacion_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.peso {
+    background: url(../img/dos_peso_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.hipertension {
+    background: url(../img/cuatro_hipertension_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.huesos {
+    background: url(../img/uno_huesos_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+
+.actitud {
+    background: url(../img/seis_actitud_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.sistema {
+    background: url(../img/cinco_sistema_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.corazon {
+    background: url(../img/ocho_corazon_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.toxinas {
+    background: url(../img/siete_toxinas_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+.disciplina {
+    background: url(../img/nueve_disciplina_pc.png) no-repeat center 0px;
+    font-size: 1.5em;
+}
+
+/* SALUD */
+
+/* CONCTACTO */
+
+.form-group label {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.submit {
+    font-size: 1.25em;
+    float: right;
+    background-color: dodgerblue;
+}
+
+.submit:hover {
+    background-color: #ffc738;
+}
+
+/* CONCTACTO */
+
+/* FOOTER */
+
+#datos li a:hover {
+    color: #ffc738;
+}
+
+
+footer #social li {
+    display: inline-block;
+}
+
+footer ul li {
+    list-style: none;
+    font-weight: bold;
+}
+
+#social li a {
+    display: block;
+    margin: 0px 10px;
+    width: 39px;
+    height: 39px;
+    font-size: 0px;
+}
+
+#datos li a {
+    text-decoration: none;
+    color: white;
+}
+
+#facebook {
+    background: url(../img/facebook_small.png) no-repeat;
+}
+
+#instagram {
+    background: url(../img/instagram_small.png) no-repeat;
+}
+
+#twitter {
+    background: url(../img/twitter_small.png) no-repeat;
+}
+
+#facebook:hover {
+    background: url(../img/facebook_small_hover.png) no-repeat;
+}
+
+#instagram:hover {
+    background: url(../img/instagram_small_hover.png) no-repeat;
+}
+
+#twitter:hover {
+    background: url(../img/twitter_small_hover.png) no-repeat;
+}
+
+/* FOOTER */
+
+/* MODAL */
+
+#correcto {
+    display: none;
+}
+
+#correcto:target {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#correcto div {
+    background: url(../img/correcto.png) no-repeat center 40px white;
+    text-align: center;
+    width: 75%;
+    padding-top: 200px;
+    padding-bottom: 40px;
+    margin: 10vh auto;
+}
+
+#correcto a {
+    text-decoration: none;
+    background-color: dodgerblue;
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+#correcto a:hover {
+    background-color: #ffc738;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #correcto div {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #correcto div {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    #correcto div {
+        width: 35%;
+    }
+}
+
+/* MODAL */
+
+.estilo_precio{
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}
+
+.estilo_nombre_producto{
+    font-size: 2.4rem;
+    color: #007bff;
+}
+
+.titulo_productos{
+    font-weight: bold;
+}
+
+.checkbox_productos{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
