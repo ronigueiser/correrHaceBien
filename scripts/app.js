@@ -42,120 +42,78 @@ Vue.component('form-component',{
 	},
 	computed : {
 		hay_Errores: function () {
-			return this.errores.length; // Devuelve cantidad errores
+			return this.errores.length;
 		}
 	},
-	template: `<div class="form">
-
-		<form v-on:submit.prevent="analizar" class="formulario" novalidate>
-
-		<div>
-			<label>Nombre y Apellido</label>
-				<input type="text" v-model="titulo" name="nombre" required/>
-				<p>Nombre ingresado: {{titulo}} </p>
-		</div>
-
-		<div>
-			<label>Edad</label>
-				 <input type="number" v-model.number="edad" name="edad" required/>
-				 <p>Edad ingresada {{edad}}</p>
-		</div>
-
-<!--		<div>-->
-<!--			<label>Realiza deporte?</label>-->
-<!--			<label>Si-->
-<!--				<input type="radio" value="si" v-model="ejercita" name="deporte">-->
-<!--			</label>-->
-<!--			<label>No-->
-<!--				<input type="radio" value="no" v-model="ejercita" name="deporte">-->
-<!--			</label>-->
-<!--			<p>Eligio:{{ejercita}}</p>-->
-<!--		</div>-->
-
-
-<!--		<div v-if="ejercita == si">-->
-		<div>
-			<label>Cuantos dias por semana entrena?</label>
-			<select v-model="elegido">
-
-				<option v-for="item in options" v-bind:value="item.dato">
-					 {{item.texto}}
-				</option>
-			</select>
-			<span>Seleccionado: {{elegido}}</span>
-		</div>
-
-
-		<div class="checkbox_productos">
-			<label>Elija los productos que le interesan</label>
-
-			<label>Ninguno
-				<input type="checkbox" value="Ninguno" v-model="lista_de_productos" name="Ninguno" require>
-			</label>
-
-			<label>Buzo
-				<input type="checkbox" value="Buzo" v-model="lista_de_productos" name="Buzo">
-			</label>
-
-			<label>Remera
-				<input type="checkbox" value="Remera" v-model="lista_de_productos" name="Remera">
-			</label>
-
-			<label>Short
-				<input type="checkbox" value="Short" v-model="lista_de_productos" name="Short">
-			</label>
-
-			<label>Bolso Nike
-				<input type="checkbox" value="Bolso Nike" v-model="lista_de_productos" name="Bolso Nike">
-			</label>
-
-			<label>Calza
-				<input type="checkbox" value="Calza" v-model="lista_de_productos" name="Calza">
-			</label>
-
-			<label>Guantes
-				<input type="checkbox" value="Guantes" v-model="lista_de_productos" name="Guantes">
-			</label>
-
-			<label>Botella
-				<input type="checkbox" value="Botella" v-model="lista_de_productos" name="Botella">
-			</label>
-
-			<label>Porta Celular
-				<input type="checkbox" value="Porta Celular" v-model="lista_de_productos" name="Porta Celular">
-			</label>
-
-			<label>Reloj
-				<input type="checkbox" value="Reloj" v-model="lista_de_productos" name="Reloj">
-			</label>
-
-			<span>Nombres: {{lista_de_productos}}</span>
-		</div>
+	template: `<div class="form container">
+			<h2 class="text-center my-5">Contanos tu Perfil</h2>
+			<form v-on:submit.prevent="analizar" class="formulario container" novalidate>
+				
+				<div class="row px-3 mt-5 mb-2">
+					<label class="col-6">Nombre y Apellido:</label>
+					<input  class="col-6" type="text" v-model="titulo" name="nombre" required/>
+				</div>
+				<div class="row px-3 my-2">
+					<label class="col-6">Edad:</label>
+					<input class="col-6" type="number" v-model.number="edad" name="edad" required/>
+				</div>
+				<div class="row px-3 my-2">
+					<label class="col-6">Días de entrenamiento p/ semana</label>
+					<select v-model="elegido" class="col-6">
+						<option v-for="item in options" v-bind:value="item.dato">
+							 {{item.texto}}
+						</option>
+					</select>
+				</div>
+				<div class="checkbox_productos row px-3 mt-2">
+					<div>
+						<label class="col-12">Elegí los productos que te interesan:</label>
+							<div class="col-12">
+								<div class="row">
+									<label class="col"><input type="checkbox" value="Ninguno" v-model="lista_de_productos" name="Ninguno" require class="mr-2">Ninguno</label>
+									<label class="col"><input type="checkbox" value="Buzo" v-model="lista_de_productos" name="Buzo" class="mr-2">Buzo</label>
+									<label class="col"><input type="checkbox" value="Remera" v-model="lista_de_productos" name="Remera" class="mr-2">Remera</label>
+									<label class="col"><input type="checkbox" value="Short" v-model="lista_de_productos" name="Short" class="mr-2">Short</label>
+									<label class="col"><input type="checkbox" value="Bolso Nike" v-model="lista_de_productos" name="Bolso Nike" class="mr-2">Bolso</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="row">
+									<label class="col"><input type="checkbox" value="Calza" v-model="lista_de_productos" name="Calza" class="mr-2">Calza</label>
+									<label class="col"><input type="checkbox" value="Guantes" v-model="lista_de_productos" name="Guantes" class="mr-2">Guantes</label>
+									<label class="col"><input type="checkbox" value="Botella" v-model="lista_de_productos" name="Botella" class="mr-2">Botella</label>
+									<label class="col"><input type="checkbox" value="Porta Celular" v-model="lista_de_productos" name="Porta Celular" class="mr-2">Portacelu</label>
+									<label class="col"><input type="checkbox" value="Reloj" v-model="lista_de_productos" name="Reloj" class="mr-2">Reloj</label>	
+								</div>
+							</div>
+						</div>
+					</div>
 
 
 
-		<input type="submit" value="Enviar"/>
+		<input type="submit" value="Enviar" class="boton-submit"/>
 
 
 		<div v-if="enviado === true">
-			<div v-if="hay_Errores" class="">
-				 <ul>
-					 <li v-for="error in errores" >{{error}}</li>
-				</ul>
-	  		</div>
-	  		<div v-else class="enviado">
-	              <span>Enviado con éxito</span>
-	        </div>
- 		</div>
+					<div v-if="hay_Errores" class="errores-varios">
+						 <ul class="text-center">
+							 <li v-for="error in errores" >{{error}}</li>
+						</ul>
+					</div>
+					<div v-else class="enviado text-center">
+						  <span>¡Datos enviados con éxito!</span>
+					</div>
+				</div>
 
 		<div v-if="this.array.length > 0" >
-			<h2>Datos</h2>
-				<ul>
-					<li>Nombre ingresado: {{titulo}}</li>
-					<li>Edad ingresada {{edad}}</li>
-					<li>Seleccionado: {{elegido}}</li>
-					<li>Nombres: {{lista_de_productos}}</li>
-				</ul>
+			<div id="carnet" class="col-7 my-5">
+						<h2 class="h4 mt-4 text-center" >Carnet de Entrenamiento</h2>
+						<ul class="mt-3 mb-4">
+							<li><b>Nombre:</b> {{titulo}}</li>
+							<li><b>Edad:</b> {{edad}}</li>
+							<li><b>Frecuecia:</b> {{elegido}}</li>
+						</ul>
+					</div>
 	
 		</div>
 		<div v-else class="classerror">
@@ -174,6 +132,7 @@ Vue.component('form-component',{
 
 			this.enviado = true;
 			this.errores=[]
+
 
 			if (!this.titulo) {
 				console.log(!this.titulo)
