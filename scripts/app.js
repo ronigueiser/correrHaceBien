@@ -116,8 +116,9 @@ Vue.component('form-component',{
 					</div>
 	
 		</div>
-		<div v-else class="classerror">
-			<p>No hay datos que mostrar, empezá a cargar tus juegos!</p>
+		
+		<div v-else class="classerror text-center mt-3">
+			<p>¡Llená los campos y creá tu carnet de entrenamiento!</p>
 		</div>
 
 
