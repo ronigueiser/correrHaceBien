@@ -47,7 +47,7 @@ Vue.component('form-component',{
 	},
 	template: `<div class="form container">
 			<h2 class="text-center my-5">Contanos tu Perfil</h2>
-			<form v-on:submit.prevent="analizar" class="formulario container" novalidate>
+			<form v-on:submit.prevent="analizar" class="formulario container" novalidate id="contacto">
 				
 				<div class="row px-3 mt-5 mb-2">
 					<label class="col-6">Nombre y Apellido:</label>
